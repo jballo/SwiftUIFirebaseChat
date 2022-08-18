@@ -54,6 +54,7 @@
 				31BD1B4728AECE7A00C36CE5 /* SwiftUIFirebaseChatApp.swift */,
 				31BD1B4928AECE7A00C36CE5 /* ContentView.swift */,
 				31BD1B4B28AECE7B00C36CE5 /* Assets.xcassets */,
+				31BD1B5628AECF3C00C36CE5 /* DevSources */,
 				31BD1B4D28AECE7B00C36CE5 /* Preview Content */,
 			);
 			path = SwiftUIFirebaseChat;
@@ -65,6 +66,13 @@
 				31BD1B4E28AECE7B00C36CE5 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		31BD1B5628AECF3C00C36CE5 /* DevSources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DevSources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
