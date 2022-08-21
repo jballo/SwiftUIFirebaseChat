@@ -1,0 +1,21 @@
+project 'SwiftUIFirebaseChat.xcodeproj'
+
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'SwiftUIFirebaseChat' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+  
+  # Authentication
+  pod 'FirebaseAuth'
+  
+  # Cloud Storage for Firestore
+  pod 'FirebaseFirestore'
+
+  # Cloud Storage for Storage
+  pod 'FirebaseStorage'
+
+  # Pods for SwiftUIFirebaseChat
+
+end
