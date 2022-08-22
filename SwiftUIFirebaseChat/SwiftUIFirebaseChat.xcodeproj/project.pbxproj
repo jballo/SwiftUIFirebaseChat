@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3174531228B2F55100A0E9DA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3174531128B2F55100A0E9DA /* GoogleService-Info.plist */; };
 		31BD1B4828AECE7A00C36CE5 /* SwiftUIFirebaseChatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BD1B4728AECE7A00C36CE5 /* SwiftUIFirebaseChatApp.swift */; };
 		31BD1B4A28AECE7A00C36CE5 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BD1B4928AECE7A00C36CE5 /* LoginView.swift */; };
 		31BD1B4C28AECE7B00C36CE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31BD1B4B28AECE7B00C36CE5 /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3174531128B2F55100A0E9DA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		31BD1B4428AECE7A00C36CE5 /* SwiftUIFirebaseChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIFirebaseChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31BD1B4728AECE7A00C36CE5 /* SwiftUIFirebaseChatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIFirebaseChatApp.swift; sourceTree = "<group>"; };
 		31BD1B4928AECE7A00C36CE5 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 		31BD1B5628AECF3C00C36CE5 /* DevSources */ = {
 			isa = PBXGroup;
 			children = (
+				3174531128B2F55100A0E9DA /* GoogleService-Info.plist */,
 			);
 			path = DevSources;
 			sourceTree = "<group>";
@@ -164,6 +167,7 @@
 			files = (
 				31BD1B4F28AECE7B00C36CE5 /* Preview Assets.xcassets in Resources */,
 				31BD1B4C28AECE7B00C36CE5 /* Assets.xcassets in Resources */,
+				3174531228B2F55100A0E9DA /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
