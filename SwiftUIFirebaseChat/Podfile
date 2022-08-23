@@ -16,6 +16,9 @@ target 'SwiftUIFirebaseChat' do
   # Cloud Storage for Storage
   pod 'FirebaseStorage'
 
+  # For SDWebImageSwiftUi
+  pod 'SDWebImageSwiftUI'
+
   # Pods for SwiftUIFirebaseChat
 
 end
