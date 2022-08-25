@@ -18,10 +18,15 @@ class MainMessagesViewModel: ObservableObject {
     @Published var chatUser: ChatUser?
     
     init() {
+        
+        DispatchQueue.main.async {
+            self.isCurrentlyLoggedOut = FirebaseManager.shared.auth.currentUser?.uid == nil
+        }
+        
         fetchCurrentUser()
     }
     
-    private func fetchCurrentUser() {
+    func fetchCurrentUser() {
         guard let uid = FirebaseManager.shared.auth.currentUser?.uid else {
             self.errorMessage = "Could not find firebase uid"
             
@@ -56,6 +61,13 @@ class MainMessagesViewModel: ObservableObject {
 //                self.errorMessage = chatUser.profileImageUrl
 
             }
+    }
+    
+    @Published var isCurrentlyLoggedOut = false
+    
+    func handleSignOut() {
+        isCurrentlyLoggedOut.toggle()
+        try? FirebaseManager.shared.auth.signOut()
     }
 }
 
@@ -122,10 +134,17 @@ struct MainMessagesView: View {
             .init(title: Text("Settings"), message: Text("What do you want to do?"), buttons: [
                 .destructive(Text("Sign Out"), action: {
                     print("handle sign out")
+                    vm.handleSignOut()
                 }),
 //                        .default(Text("DEFAULT BUTTON")),
                     .cancel()
             ])
+        }
+        .fullScreenCover(isPresented: $vm.isCurrentlyLoggedOut, onDismiss: nil) {
+            LoginView(didCompleteLoginProcess: {
+                self.vm.isCurrentlyLoggedOut = false
+                self.vm.fetchCurrentUser()
+            })
         }
     }
     
@@ -184,9 +203,9 @@ struct MainMessagesView: View {
 
 struct MainMessagesView_Previews: PreviewProvider {
     static var previews: some View {
-        MainMessagesView()
-            .preferredColorScheme(.dark)
-        
+//        MainMessagesView()
+//            .preferredColorScheme(.dark)
+//
         MainMessagesView()
     }
 }
